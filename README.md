@@ -1,2 +1,1 @@
-# SODA
-SennesOmics Data Analysis
+# SODA (SennesOmics Data Analysis)
