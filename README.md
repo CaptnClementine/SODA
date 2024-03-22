@@ -70,6 +70,42 @@ Based on the described process, a total of 16122 CpGs were identified for differ
 The two primary principles of CpG grouping by the same age were the median and peak values of density distribution. The main pipeline after grouping remained consistent: calculating the correlation matrix of CpGs, then identifying clusters of CpGs that exhibit similar trends during aging, followed by visualization of clusters and cluster samples. 
 
 ## Transcriptomics
+
+In the realm of transcriptomics data and microarray analysis, RNA sequencing (RNA-seq) is essential techniques for understanding gene expression changes, and as cosequenses methabolic changes in the cells and body.
+
+RNA-seq is a powerful tool for measuring the abundance of RNA transcripts in a sample, providing insights into gene expression levels, alternative splicing, and transcript isoforms. This technique involves sequencing cDNA synthesized from RNA molecules extracted from cells or tissues, allowing researchers to quantify gene expression levels and identify differentially expressed genes under various conditions or disease states.
+
+Microarray transcriptomics data refers to information obtained through the use of microarray technology to profile gene expression patterns across the genome. This method allows researchers to analyze gene expression levels at multiple genomic loci simultaneously, providing a comprehensive view of transcriptional activity. Microarray-based transcriptomic profiling involves hybridizing RNA samples onto microarrays containing probes specific to different genes or transcripts. By comparing gene expression patterns between samples or conditions, researchers can identifychanges about  gene expression  and gain insights into cellular processes, biological pathways, and disease mechanisms.
+
+**Objective:** This project part aims to investigate the role of genomic modifications in the aging process, focusing on identifying key gene expression patterns and trends associated with aging.
+
+**Workflow:**
+1. **Data Collection:** Gather transcriptomic data from aging cohorts.
+
+2. **Data annotation:** Annotation of the all data for the next steps and more careful data fusion
+   
+3. **Batch Correction:** Detect and correct for batch effects in the data to ensure accurate analysis.
+   
+4. **Gene Group Detection:** Utilize various statistical methods and clustering techniques to detect genes associated with aging.
+   
+5. **Trend Line Detection:** Analyze trends for each genes to understand their behavior with age.
+   
+6. **Validation:** Validate detected other RNAseq or microarray data using independent datasets, such as PBMC cohorts.
+   
+7. **GSEA Validation:** Perform Gene Set Enrichment Analysis (GSEA) within validated genes to assess biological significance.
+   
+8. **Regression Modeling:** Construct regression models to depict age-related trends before and after specific age thresholds (e.g., 25 and 37 years old).
+   
+9. **Enrichment Analysis:** Conduct enrichment analysis to elucidate functional pathways and common master regulators associated with identified trends.
+   
+10. **Integration:** Merge findings from epigenomic analysis into comprehensive multi-omics analysis for a deeper understanding of aging processes.
+
+### Data collection and annotation
+There are 9 datasets  where annotated and merged by the presenting common genes: GSE56047, GSE16717, GSE67220, GSE56033, GSE30483, GSE47353, GSE68759, GSE7551, GSE65907. 
+
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/a3328486-5bbd-4c11-a3f5-9fc349780db8)
+
+
 # Links
 1 https://sci-hub.ru/https://www.cambridge.org/core/journals/zygote/article/abs/antioxidant-activities-and-lipid-peroxidation-status-in-human-follicular-fluid-agedependent-change/DD95456667D836090C97F9E3C91BC459
 2 https://pubmed.ncbi.nlm.nih.gov/21451205/
