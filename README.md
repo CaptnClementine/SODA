@@ -102,11 +102,12 @@ Microarray transcriptomics data refers to information obtained through the use o
 
 ### Data collection and annotation
 There are 9 datasets  where annotated and merged by the presenting common genes: GSE56047, GSE16717, GSE67220, GSE56033, GSE30483, GSE47353, GSE68759, GSE7551, GSE65907. 
-
-![image](https://github.com/CaptnClementine/SODA/assets/131146976/a3328486-5bbd-4c11-a3f5-9fc349780db8)
+There are 4588 samples collected in data, with differens ages and genders. Disrtibution of all dataest in common dataset you can see below 
+![image](https://github.com/GlebBobkov/SODA/blob/transcriptomic/Age%20Distribution%20in%20Each%20Dataset.png)
+![image](https://github.com/GlebBobkov/SODA/blob/transcriptomic/Summary%20of%20Dataset%20Characteristics.png)
 
 
 # Links
-1 https://sci-hub.ru/https://www.cambridge.org/core/journals/zygote/article/abs/antioxidant-activities-and-lipid-peroxidation-status-in-human-follicular-fluid-agedependent-change/DD95456667D836090C97F9E3C91BC459
+1 https://sci-hub.ru/https://www.cambridge.org/core/journals/zygote/article/abs/antioxidant-ativities-and-lipid-peroxidation-status-in-human-follicular-fluid-agedependent-change/DD95456667D836090C97F9E3C91BC459
 2 https://pubmed.ncbi.nlm.nih.gov/21451205/
 3 https://sci-hub.ru/https://www.nature.com/articles/s41591-019-0673-2
