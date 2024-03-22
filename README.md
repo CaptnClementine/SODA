@@ -1,7 +1,7 @@
 # SODA (SennesOmics Data Analysis)
 
 The aim of this experiment is to comprehensively characterize the molecular changes associated with aging around the age of 37 through multiomics analysis. The utilized omics data include Epigenomics and RNA-sequencing.
-Why choose 37 instead of 42, you might ask? Well, extensive literature suggests that there are specific age-related changes occurring around 25 and 37-40 years old. But perhaps 42 is the correct answer😊 who knows?
+Why choose 37 instead of 42, you might ask? Well, extensive literature suggests that there are specific age-related changes occurring around 25 and 37-40 years old(1). But perhaps 42 is the correct answer😊 who knows?
 
 ![image](https://github.com/CaptnClementine/SODA/assets/131146976/f9b224e8-5e5a-4854-a542-ae91e00fee35)
 
@@ -70,3 +70,5 @@ Based on the described process, a total of 16122 CpGs were identified for differ
 The two primary principles of CpG grouping by the same age were the median and peak values of density distribution. The main pipeline after grouping remained consistent: calculating the correlation matrix of CpGs, then identifying clusters of CpGs that exhibit similar trends during aging, followed by visualization of clusters and cluster samples. 
 
 ## Transcriptomics
+# Links
+1 https://sci-hub.ru/https://www.cambridge.org/core/journals/zygote/article/abs/antioxidant-activities-and-lipid-peroxidation-status-in-human-follicular-fluid-agedependent-change/DD95456667D836090C97F9E3C91BC459
