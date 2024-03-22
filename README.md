@@ -1,6 +1,10 @@
 # SODA (SennesOmics Data Analysis)
 
 The aim of this experiment is to comprehensively characterize the molecular changes associated with aging around the age of 37 through multiomics analysis. The utilized omics data include Epigenomics and RNA-sequencing.
+Why choose 37 instead of 42, you might ask? Well, extensive literature suggests that there are specific age-related changes occurring around 25 and 37-40 years old. But perhaps 42 is the correct answer😊 who knows?
+
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/f9b224e8-5e5a-4854-a542-ae91e00fee35)
+
 ## Epigenomics
 DNA methylation is an epigenetic mechanism that involves the addition of a methyl group to DNA molecules, typically at cytosine bases within CpG dinucleotides. This modification plays a crucial role in gene regulation, development, and various cellular processes. In the context of aging, epigenomics explores how these modifications change over time and contribute to age-related processes and diseases. 
 
