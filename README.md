@@ -1,9 +1,9 @@
 # SODA (SennesOmics Data Analysis)
 
 The aim of this experiment is to comprehensively characterize the molecular changes associated with aging around the age of 37 through multiomics analysis. The utilized omics data include Epigenomics and RNA-sequencing.
-Why choose 37 instead of 42, you might ask? Well, extensive literature suggests that there are specific age-related changes occurring around 25 and 37-40 years old(1). But perhaps 42 is the correct answer😊 who knows?
+Why choose 37 instead of 42, you might ask? Well, extensive literature suggests that there are specific age-related changes occurring around 37-40 years old [1, 2, 3]. But perhaps 42 is the correct answer😊 who knows?
 
-![image](https://github.com/CaptnClementine/SODA/assets/131146976/f9b224e8-5e5a-4854-a542-ae91e00fee35)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/a3328486-5bbd-4c11-a3f5-9fc349780db8)
 
 ## Epigenomics
 DNA methylation is an epigenetic mechanism that involves the addition of a methyl group to DNA molecules, typically at cytosine bases within CpG dinucleotides. This modification plays a crucial role in gene regulation, development, and various cellular processes. In the context of aging, epigenomics explores how these modifications change over time and contribute to age-related processes and diseases. 
@@ -72,3 +72,5 @@ The two primary principles of CpG grouping by the same age were the median and p
 ## Transcriptomics
 # Links
 1 https://sci-hub.ru/https://www.cambridge.org/core/journals/zygote/article/abs/antioxidant-activities-and-lipid-peroxidation-status-in-human-follicular-fluid-agedependent-change/DD95456667D836090C97F9E3C91BC459
+2 https://pubmed.ncbi.nlm.nih.gov/21451205/
+3 https://sci-hub.ru/https://www.nature.com/articles/s41591-019-0673-2
