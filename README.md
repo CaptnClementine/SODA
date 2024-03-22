@@ -62,3 +62,7 @@ Finally, the number of CpGs exhibiting a significant difference in mean expressi
 Based on the described process, a total of 16122 CpGs were identified for different age groups within the dataset GSE42861.
 
 ### Influence of Two CpG Group Detection Methods on Clusterization Trend Lines
+
+The two primary principles of CpG grouping by the same age were the median and peak values of density distribution. The main pipeline after grouping remained consistent: calculating the correlation matrix of CpGs, then identifying clusters of CpGs that exhibit similar trends during aging, followed by visualization of clusters and cluster samples. 
+
+## Transcriptomics
