@@ -67,10 +67,48 @@ Based on the described process, a total of 16122 CpGs were identified for differ
 
 ### Influence of Two CpG Group Detection Methods on Clusterization Trend Lines
 
-The two primary principles of CpG grouping by the same age were the median and peak values of density distribution. The main pipeline after grouping remained consistent: calculating the correlation matrix of CpGs, then identifying clusters of CpGs that exhibit similar trends during aging, followed by visualization of clusters and cluster samples. 
+The two primary principles of CpG grouping by the same age were the median and peak values of density distribution. The main pipeline after grouping remained consistent: calculating the correlation matrix of CpGs, then identifying clusters of CpGs that exhibit similar trends during aging, followed by visualization of clusters and cluster samples. For trend line plotting, a window of +/- 2 years was utilized.
+#### Clustering and trend lines following median grouping.
+
+**1. Hierarchical clustering.**
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/f55ba285-30d9-4c78-b34a-49394e83dc4a)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/3ffe008c-f613-4b95-b003-a50c14b32e75)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/37f8638a-dff5-4290-9c84-7bd0993cf41f)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/16b97c8a-0911-4854-9281-51d35da4e074)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/d7d42f4b-8ba6-4bc9-b8f7-4859c14cfa32)
+
+
+Trend lines examples:
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/29d3ca8d-2ae4-443c-8319-314f64439c44)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/adbc48b7-a081-4740-8a25-76b504a67c74)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/ecff04a7-2b89-43b5-8045-44221c8390b1)
+**2. K-means clustering.**
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/4be9e1e9-d504-4eb2-96bf-46514c7488ec)
+
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/6966537d-b92d-40ec-ae43-eadc7b2db6ee)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/da2e5b32-a025-4dfb-9d7f-7a3df6e76c09)
+Trend lines examples:
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/b1f37269-f2ac-4d77-b7db-a9ba07cfc1e9)
+**3. DBSCAN.**
+This clustering method yielded the worst results.
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/2332a6aa-c6c2-4044-8b78-9897b5aabde9)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/a5184671-9509-4e4e-ac5f-f50af7612059)
+
+**4. Gaussian Mixture.**
+Gaussian Mixture was applied solely to identify four clusters, as my notebook's capacity reached its maximum limit, resulting in failure when attempting to detect more clusters
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/b4222446-f700-4c84-9fa8-c92d9a65a58b)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/f726a9fd-1583-4a16-94a3-1936f13951cd)
+
+Trend lines examples:
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/db3de60a-e8b6-42f9-8b7c-9ffb6a198a38)
+
+
 
 ## Transcriptomics
 # Links
 1 https://sci-hub.ru/https://www.cambridge.org/core/journals/zygote/article/abs/antioxidant-activities-and-lipid-peroxidation-status-in-human-follicular-fluid-agedependent-change/DD95456667D836090C97F9E3C91BC459
+
 2 https://pubmed.ncbi.nlm.nih.gov/21451205/
+
+
 3 https://sci-hub.ru/https://www.nature.com/articles/s41591-019-0673-2
