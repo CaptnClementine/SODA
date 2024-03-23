@@ -102,6 +102,19 @@ Gaussian Mixture was applied solely to identify four clusters, as my notebook's 
 Trend lines examples:
 ![image](https://github.com/CaptnClementine/SODA/assets/131146976/db3de60a-e8b6-42f9-8b7c-9ffb6a198a38)
 
+#### Clustering and trend lines following peak values of density distribution grouping.
+
+**1. Hierarchical clustering.**
+
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/bc38964d-eab3-4d9a-a55a-da8fc7217ebb)
+
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/30c8b883-ebcd-4891-88c0-d0d8c0529226)
+
+Trend lines examples:
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/8cff9734-a891-477b-814b-79737a5381c8)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/2d7d4c40-4a13-4345-9fe8-3072eaad7a69)
+![image](https://github.com/CaptnClementine/SODA/assets/131146976/0f69717f-3801-4c4b-bb74-050dab162d7b)
+
 
 
 ## Transcriptomics
