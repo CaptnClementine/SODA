@@ -89,3 +89,55 @@ def calculate_clusters_statistics(df: pd.DataFrame, labels: np.ndarray) -> pd.Da
     stats['mean'] = df.groupby(['cluster_kmeans']).mean().T.mean()
     stats['std'] = df.groupby(['cluster_kmeans']).std().T.mean()
     return stats
+
+
+def plot_top_trends_for_each_cluster(df_mean_for_statistics: pd.DataFrame) -> None:
+    """
+    Plot top trend lines for each cluster.
+
+    Parameters:
+        df_mean_for_statistics (pd.DataFrame): DataFrame containing CpG data in rows and ages in columns.
+
+    Returns:
+        None
+    """
+    num_clusters = len(df_mean_for_statistics['cluster'].unique())
+    num_rows = num_clusters // 2
+    num_cols = 2
+
+    fig, axs = plt.subplots(num_rows, num_cols, figsize=(12, 6*num_rows))
+
+    # Flatten the axis objects if there is only one row
+    if num_rows == 1:
+        axs = axs.reshape(1, -1)
+
+    # Loop through each cluster
+    for cluster_id in range(0, num_clusters):
+        cluster_data = df_mean_for_statistics[df_mean_for_statistics['cluster'] == cluster_id]
+
+        # Calculate subplot index
+        row_idx = (cluster_id) // num_cols
+        col_idx = (cluster_id) % num_cols
+        ax = axs[row_idx, col_idx]
+
+        # Loop through top-40 CpG site in the cluster and plot
+        for cg_value in cluster_data.index[:40]:
+            subset = mean_window_df[[cg_value]].sort_index()
+            ax.plot(subset.index, subset[cg_value], label='')
+
+        ax.set_ylim(0, 1)
+        ax.set_yticks(np.arange(0, 1.1, 0.2))
+
+        min_age = df_mean_for_statistics.drop(columns=['cluster']).columns.min()
+        max_age = df_mean_for_statistics.drop(columns=['cluster']).columns.max()
+        ax.set_xticks(np.arange(min_age, max_age, 3))
+
+        ax.set_xlabel('Age')
+        ax.set_ylabel('CpG')
+        ax.grid(True)
+        ax.legend(loc='upper right')
+        ax.text(0.5, 0.95, f'Cluster {cluster_id}', ha='center', va='center', transform=ax.transAxes, fontsize=12, fontweight='bold')
+
+
+    plt.tight_layout()
+    plt.show()
