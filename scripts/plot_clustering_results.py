@@ -91,12 +91,13 @@ def calculate_clusters_statistics(df: pd.DataFrame, labels: np.ndarray) -> pd.Da
     return stats
 
 
-def plot_top_trends_for_each_cluster(df_mean_for_statistics: pd.DataFrame) -> None:
+def plot_top_trends_for_each_cluster(df_mean_for_statistics: pd.DataFrame, mean_window_df: pd.DataFrame) -> None:
     """
     Plot top trend lines for each cluster.
 
     Parameters:
         df_mean_for_statistics (pd.DataFrame): DataFrame containing CpG data in rows and ages in columns.
+        mean_window_df (pd.DataFrame): DataFrame with values calculated using mean window (could be without mean window)
 
     Returns:
         None
