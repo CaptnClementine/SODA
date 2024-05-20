@@ -1,8 +1,11 @@
 import seaborn as sns
+import pandas as pd
 import numpy as np
 import umap
 import matplotlib.pyplot as plt
+
 from sklearn.manifold import TSNE
+from scipy.cluster.hierarchy import cut_tree
 
 
 def plot_umap_and_tsne(labels: np.ndarray, x: np.ndarray) -> None:
@@ -45,6 +48,29 @@ def plot_pca(labels: np.ndarray, components_df: pd.DataFrame) -> None:
     plt.figure(figsize=(10, 6))
     sns.scatterplot(data=components_df, x='x', y='y', hue=labels, palette='viridis')
 
+
+def cut_clustermap_tree(clustering_results, n_clusters=2, by_cols=True, name='Clusters') -> pd.Series:
+    """
+    Cut clustermap into the desired number of clusters.
+
+    Parameters:
+        clustering_results: Clustering results obtained from seaborn.clustermap.
+        n_clusters (int): Number of clusters to cut the tree into.
+        by_cols (bool): If True, cut the clustering tree by columns, else by rows.
+        name (str): Name for the resulting series.
+
+    Returns:
+        pd.Series: Series containing cluster assignments.
+    """
+    if by_cols:
+        link = clustering_results.dendrogram_col.linkage
+        index = clustering_results.data.columns
+    else:
+        link = clustering_results.dendrogram_row.linkage
+        index = clustering_results.data.index
+
+    return pd.Series(cut_tree(link, n_clusters=n_clusters)[:, 0], index=index, name=name) + 1
+    
 
 def calculate_clusters_statistics(df: pd.DataFrame, labels: np.ndarray) -> pd.DataFrame:
     """
