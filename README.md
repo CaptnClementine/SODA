@@ -1,4 +1,5 @@
 # SODA (SennesOmics Data Analysis)
+<img width="978" alt="image" src="https://github.com/CaptnClementine/SODA/assets/131146976/67a53038-c343-4429-ac54-37f344f84c35">
 
 The aim of this experiment is to comprehensively characterize the molecular changes associated with aging around the age of 37 through multiomics analysis. The utilized omics data include Epigenomics and RNA-sequencing.
 Why choose 37 instead of 42, you might ask? Well, extensive literature suggests that there are specific age-related changes occurring around 37-40 years old [1, 2, 3]. But perhaps 42 is the correct answer😊 who knows?
