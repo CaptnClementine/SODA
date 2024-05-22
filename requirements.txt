@@ -1,0 +1,12 @@
+geoparse
+GEOparse
+pandas
+seaborn
+numpy
+umap-learn
+matplotlib
+scikit-learn
+plotly
+scanpy
+pydeseq2
+combat
