@@ -10,3 +10,4 @@ plotly
 scanpy
 pydeseq2
 combat
+rpy2
