@@ -1,0 +1,21 @@
+Dataset GEO,Data source,Passed,Comment
+GSE36054,methylation PBMC,TRUE,
+GSE42861,methylation PBMC,TRUE,
+GSE51032,methylation PBMC,TRUE,
+GSE69270,methylation PBMC,TRUE,
+GSE51057,methylation PBMC,FALSE,subset of GSE51032
+GSE41169,methylation whole blood,FALSE,not PBMC
+GSE30870,methylation whole blood,FALSE,not PBMC
+GSE52588,methylation whole blood,FALSE,not PBMC
+GSE73103,methylation whole blood,FALSE,not PBMC
+GSE64495,methylation whole blood,FALSE,not PBMC
+GSE69270,methylation whole blood,FALSE,not PBMC
+GSE56033,microarray RNA,TRUE,"Data distribution has enougth age coverage, gene expression is different"
+GSE30483,microarray RNA,TRUE,
+GSE68759,microarray RNA,TRUE,
+GSE75511,microarray RNA,TRUE,
+GSE16717,microarray RNA,FALSE,"Data distribution has insufficient age coverage, gene expression is low"
+GSE67220,microarray RNA,FALSE,
+GSE56047,microarray RNA,FALSE,
+GSE47353,microarray RNA,FALSE,
+GSE65907,microarray RNA,FALSE,
