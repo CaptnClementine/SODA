@@ -1,10 +1,34 @@
 # SODA (SennesOmics Data Analysis)
-<img width="978" alt="image" src="https://github.com/CaptnClementine/SODA/assets/131146976/67a53038-c343-4429-ac54-37f344f84c35">
 
-The aim of this experiment is to comprehensively characterize the molecular changes associated with aging around the age of 37 through multiomics analysis. The utilized omics data include Epigenomics and RNA-sequencing.
-Why choose 37 instead of 42, you might ask? Well, extensive literature suggests that there are specific age-related changes occurring around 37-40 years old [1, 2, 3]. But perhaps 42 is the correct answer😊 who knows?
+This repository is the outcome of a project conducted at the [Bioinformatics Institute](https://bioinf.me/), aimed at comprehensively characterizing the molecular changes associated with aging around the age of 37 through multiomics analysis. The utilized omics data include Epigenomics and RNA-sequencing.
 
-![image](https://github.com/CaptnClementine/SODA/assets/131146976/a3328486-5bbd-4c11-a3f5-9fc349780db8)
+Why choose 37 instead of 42, you might ask? There is a lot of diverse data showing the importance of processes in this particular age interval (about 37 years), in particular, changes in glucose metabolism, an increase in markers of oxidative stress (MDA) in the blood plasma from 37 years, as well as in the interval 20-25 years for men and women [1-4]. But perhaps 42 is the correct answer 😊, who knows?
+
+<img width="700" alt="image" src="https://github.com/CaptnClementine/SODA/assets/131146976/a3328486-5bbd-4c11-a3f5-9fc349780db8">
+
+
+## Workflow structure
+
+The workflow comprises the following steps:
+
+1. **Data Collection:** Find and download epigenomic and transcriptomic data from aging cohorts, including DNA methylation profiles.
+2. **Batch Correction:** Detect and correct for batch effects in the data to ensure accurate analysis.
+3. **Sample Sex Identification:** Determine the sex of the samples.
+4. **Main Pipeline Creation:** Develop main scripts for individual cohorts and meta-cohorts.
+     - CpG selection (retain only differing CpGs).
+     - Detection of CpG groups using various statistical calculations and clustering methods.
+     - Selection of the optimal statistical calculation and clustering method.
+     - Detection and plotting of trend lines for each CpG/RNAseq.
+     - Validation of identified groups on PBMC cohort.
+5. **Execution of Main Script:** Run the main script for all methylation and microarray metacohorts, and additionally, analyses were performed separately for males and females.
+6. **Merge Findings:** Combine results for comprehensive omics analysis.
+7. **Functional Gene Detection:** Conduct enrichment analysis to elucidate functional pathways associated with identified trends.
+
+The entire process utilizes Jupyter notebooks, and the outputs are visually represented in the schematic image provided below:
+
+<img width="1310" alt="image" src="https://github.com/CaptnClementine/SODA/assets/131146976/99e33be0-94b3-4189-8a38-4be1a95ba4c8">
+
+# More about omics
 
 ## Epigenomics
 DNA methylation is an epigenetic mechanism that involves the addition of a methyl group to DNA molecules, typically at cytosine bases within CpG dinucleotides. This modification plays a crucial role in gene regulation, development, and various cellular processes. In the context of aging, epigenomics explores how these modifications change over time and contribute to age-related processes and diseases. 
@@ -12,32 +36,6 @@ DNA methylation is an epigenetic mechanism that involves the addition of a methy
 ![image](https://github.com/CaptnClementine/SODA/assets/131146976/722029fc-651c-45d3-bd65-bc80e5c63d03)
 
 Microarray methylation data refers to information obtained through the use of microarray technology to profile DNA methylation patterns across the genome. This method allows researchers to analyze DNA methylation levels at multiple genomic loci simultaneously, providing a comprehensive view of epigenetic modifications. Microarray-based DNA methylation profiling involves enriching unmethylated and methylated DNA fractions, which are then interrogated on microarrays containing probes specific to these regions.
-
-**Objective:**
-This project aims to investigate the role of epigenomic modifications in the aging process, focusing on identifying key CpG sites and trends associated with aging.
-
-**Workflow:**
-1. **Data Collection:** Gather epigenomic data from aging cohorts, including DNA methylation profiles.
-   
-2. **Batch Correction:** Detect and correct for batch effects in the data to ensure accurate analysis.
-   
-3. **CpG Selection:** Identify relevant CpG sites for further analysis.
-   
-4. **CpG Group Detection:** Utilize various statistical methods and clustering techniques to detect CpG groups associated with aging.
-   
-5. **Trend Line Detection:** Analyze trends for each CpG group to understand their behavior with age.
-   
-6. **Validation:** Validate detected CpG groups using independent datasets, such as PBMC cohorts.
-   
-7. **GSEA Validation:** Perform Gene Set Enrichment Analysis (GSEA) within validated CpG groups to assess biological significance.
-   
-8. **Regression Modeling:** Construct regression models to depict age-related trends before and after specific age thresholds (e.g., 25 and 37 years old).
-   
-9. **Enrichment Analysis:** Conduct enrichment analysis to elucidate functional pathways associated with identified trends.
-   
-10. **Integration:** Merge findings from epigenomic analysis into comprehensive multi-omics analysis for a deeper understanding of aging processes.
-
-This README.md provides an overview of the project's methodology and goals, guiding the workflow from data collection to interpretation of results.
 
 ### Data Collection, Batch Effect Correction, and CpG Selection
 
@@ -119,7 +117,6 @@ Trend lines examples:
 
 
 ## Transcriptomics
-## Transcriptomics
 
 In the realm of transcriptomics data and microarray analysis, RNA sequencing (RNA-seq) is essential techniques for understanding gene expression changes, and as cosequenses methabolic changes in the cells and body.
 
@@ -127,28 +124,6 @@ RNA-seq is a powerful tool for measuring the abundance of RNA transcripts in a s
 
 Microarray transcriptomics data refers to information obtained through the use of microarray technology to profile gene expression patterns across the genome. This method allows researchers to analyze gene expression levels at multiple genomic loci simultaneously, providing a comprehensive view of transcriptional activity. Microarray-based transcriptomic profiling involves hybridizing RNA samples onto microarrays containing probes specific to different genes or transcripts. By comparing gene expression patterns between samples or conditions, researchers can identifychanges about  gene expression  and gain insights into cellular processes, biological pathways, and disease mechanisms.
 
-**Objective:** This project part aims to investigate the role of genomic modifications in the aging process, focusing on identifying key gene expression patterns and trends associated with aging.
-
-**Workflow:**
-1. **Data Collection:** Gather transcriptomic data from aging cohorts.
-
-2. **Data annotation:** Annotation of the all data for the next steps and more careful data fusion
-   
-3. **Batch Correction:** Detect and correct for batch effects in the data to ensure accurate analysis.
-   
-4. **Gene Group Detection:** Utilize various statistical methods and clustering techniques to detect genes associated with aging.
-   
-5. **Trend Line Detection:** Analyze trends for each genes to understand their behavior with age.
-   
-6. **Validation:** Validate detected other RNAseq or microarray data using independent datasets, such as PBMC cohorts.
-   
-7. **GSEA Validation:** Perform Gene Set Enrichment Analysis (GSEA) within validated genes to assess biological significance.
-   
-8. **Regression Modeling:** Construct regression models to depict age-related trends before and after specific age thresholds (e.g., 25 and 37 years old).
-   
-9. **Enrichment Analysis:** Conduct enrichment analysis to elucidate functional pathways and common master regulators associated with identified trends.
-   
-10. **Integration:** Merge findings from epigenomic analysis into comprehensive multi-omics analysis for a deeper understanding of aging processes.
 
 ### Data collection and annotation
 There are 9 datasets  where annotated and merged by the presenting common genes: GSE56047, GSE16717, GSE67220, GSE56033, GSE30483, GSE47353, GSE68759, GSE7551, GSE65907. 
@@ -163,5 +138,7 @@ There are 4588 samples collected in data, with differens ages and genders. Disrt
 
 2 https://pubmed.ncbi.nlm.nih.gov/21451205/
 
-
 3 https://sci-hub.ru/https://www.nature.com/articles/s41591-019-0673-2
+
+4 https://www.nature.com/articles/s41598-019-46749-w
+
