@@ -43,29 +43,6 @@ More than 6000 samples were found for further analysis. For the initial step, ap
 
 <img src="https://github.com/CaptnClementine/SODA/assets/131146976/6ca1f703-4ec1-43ba-84e9-08b2fd31c6b9" style="width:50%;">
 
-After detecting batch effects using PCA, the COMBAT method is commonly employed to correct for these effects. COMBAT (Empirical Bayes framework) works by adjusting the data to remove unwanted variation introduced by batch effects while preserving true biological signals. It achieves this by borrowing information across genes to estimate and adjust for batch effects, enhancing the accuracy of downstream analyses by harmonizing data from different batches.
-![image](https://github.com/CaptnClementine/SODA/assets/131146976/3511627d-bb14-4e3f-b870-f6c0c091ca60)
-
-
-The dataset GSE42861 was chosen for CpG selection due to its broad age range and ample sample size, enabling the exploration of age-related CpG methylation patterns with statistical robustness.
-The selection of CpGs based on the dataset GSE42861 involved the following steps:
-
-1. **Define Age Bins:**
-Age bins were defined to categorize individuals into different age groups. The specified age bins used were: [18, 27, 30, 35, 40, 45, 60].
-  
-2. **Calculate Mean by Age Range:**
-The dataset was then grouped by age range, and the mean values for each CpG site across different age groups were calculated.
-
-3. **Calculate Difference in Mean Expression:**
-The difference between the maximum and minimum mean expression values for each CpG site across different age ranges was calculated to assess variability in CpG expression across age groups.
-
-4. **Count CpGs with Significant Differences:**
-Finally, the number of CpGs exhibiting a significant difference in mean expression across age ranges, defined as greater than 0.05, was determined.
-
-Based on the described process, a total of 16122 CpGs were identified for different age groups within the dataset GSE42861.
-
-
-
 
 ## Transcriptomics
 
@@ -75,12 +52,16 @@ RNA-seq is a powerful tool for measuring the abundance of RNA transcripts in a s
 
 Microarray transcriptomics data refers to information obtained through the use of microarray technology to profile gene expression patterns across the genome. This method allows researchers to analyze gene expression levels at multiple genomic loci simultaneously, providing a comprehensive view of transcriptional activity. Microarray-based transcriptomic profiling involves hybridizing RNA samples onto microarrays containing probes specific to different genes or transcripts. By comparing gene expression patterns between samples or conditions, researchers can identifychanges about  gene expression  and gain insights into cellular processes, biological pathways, and disease mechanisms.
 
-
 ### Data collection and annotation
 There are 9 datasets  where annotated and merged by the presenting common genes: GSE56047, GSE16717, GSE67220, GSE56033, GSE30483, GSE47353, GSE68759, GSE7551, GSE65907. 
 There are 4588 samples collected in data, with differens ages and genders. Disrtibution of all dataest in common dataset you can see below 
 ![image](https://github.com/GlebBobkov/SODA/blob/transcriptomic/Age%20Distribution%20in%20Each%20Dataset.png)
-![image](https://github.com/GlebBobkov/SODA/blob/transcriptomic/Summary%20of%20Dataset%20Characteristics.png)
+
+# Conclusions
+Using STRINGDB, we observed that these genes are responsible for changes in cellular regulation, autophagy, cell cycles, and more. Enrichr analysis showed that the top two enrichments were in FLT3 signaling and cellular senescence. 
+
+For future investigations, collecting more datasets, including lipidomics and metabolomics data, is essential for a comprehensive understanding of aging's molecular changes. In the next steps of our research, reviewing our analytical pipeline in transcriptomic data and improving correlation calculations for all data could also enhance our analysis. But even at this stage our study contributes to understanding aging by identifying key genes and pathways undergoing significant changes around 24 y.o.
+
 
 # Contacts
 
